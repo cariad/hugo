@@ -15,25 +15,20 @@ RUN apt-get update                                  && \
     apt-get --no-install-recommends --yes install      \
       git-lfs                                          \
       unzip                                         && \
-                                                    && \
     git lfs install                                 && \
-                                                    && \
     curl "${AWS_URL}" -o /tmp/aws.zip               && \
     unzip /tmp/aws.zip -d /tmp/aws                  && \
     rm /tmp/aws.zip                                 && \
     /tmp/aws/install                                && \
     rm -rf /tmp/aws                                 && \
     aws --version                                   && \
-                                                    && \
     curl "${HUGO_URL}" -L -o /tmp/hugo.tar.gz       && \
     tar xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo && \
     rm /tmp/hugo.tar.gz                             && \
     hugo version                                    && \
-                                                    && \
     curl "${S3HS_URL}" -L -o /tmp/s3hs.zip          && \
     unzip /tmp/s3hs.zip -d /usr/local/bin           && \
     rm /tmp/s3hs.zip                                && \
     s3headersetter -help                            && \
-                                                    && \
     apt-get uninstall unzip                         && \
     rm -rf /var/lib/apt/lists/*
