@@ -21,7 +21,7 @@ RUN apt-get update                                  && \
     curl "${AWS_URL}" -o /tmp/aws.zip               && \
     unzip /tmp/aws.zip -d /tmp/aws                  && \
     rm /tmp/aws.zip                                 && \
-    /tmp/aws/install                                && \
+    /tmp/aws/aws/install                            && \
     rm -rf /tmp/aws                                 && \
     aws --version                                   && \
     curl "${HUGO_URL}" -L -o /tmp/hugo.tar.gz       && \
