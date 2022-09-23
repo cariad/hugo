@@ -32,6 +32,8 @@ RUN apt-get update                                  && \
     unzip /tmp/s3hs.zip -d /usr/local/bin           && \
     rm /tmp/s3hs.zip                                && \
     s3headersetter -help                            && \
-    apt-get remove --purge unzip --yes              && \
+    apt-get remove --purge --yes                       \
+      curl                                             \
+      unzip                                         && \
     apt-get autoremove --yes                        && \
     rm -rf /var/lib/apt/lists/*
