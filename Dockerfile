@@ -13,6 +13,7 @@ ENV S3HS_URL        https://github.com/cariad/s3headersetter/releases/download/v
 RUN apt-get update                                  && \
     apt-get upgrade --yes                           && \
     apt-get --no-install-recommends --yes install      \
+      curl                                             \
       git-lfs                                          \
       unzip                                         && \
     git lfs install                                 && \
