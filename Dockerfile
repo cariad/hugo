@@ -11,7 +11,7 @@ ENV S3HS_VERSION    0.3.0
 ENV S3HS_URL        https://github.com/cariad/s3headersetter/releases/download/v${S3HS_VERSION}/s3headersetter-linux-amd64.zip
 
 RUN apt-get update                                  && \
-    apt-get upgrade                                 && \
+    apt-get upgrade --yes                           && \
     apt-get --no-install-recommends --yes install      \
       git-lfs                                          \
       unzip                                         && \
