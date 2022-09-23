@@ -1,9 +1,8 @@
 # cariad/hugo
 
-A Docker image for building and validating Hugo sites.
+A Docker image for building and publishing Hugo sites to Amazon Web Services.
 
-Contains:
-
+- AWS CLI
 - Git with LFS support
 - [Hugo](https://github.com/gohugoio/hugo)
-- [html-proofer](https://github.com/gjtorikian/html-proofer)
+- [s3headersetter](https://github.com/cariad/s3headersetter) <!-- cspell:disable-line -->
