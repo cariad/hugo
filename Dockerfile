@@ -16,6 +16,7 @@ RUN apt-get update                                  && \
       ca-certificates                                  \
       curl                                             \
       git-lfs                                          \
+      openssh-client                                   \
       unzip                                         && \
     git lfs install                                 && \
     curl "${AWS_URL}" -o /tmp/aws.zip               && \
